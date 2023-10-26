@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(to right, #FF0000, #FFA500, #FFFF00);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+    font-size: 86px;
+    animation: bornTitle 6s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes bornTitle {
+    from {
+        transform: rotateX(90deg);
+    }
+
+    to {
+        transform: rotateX(0deg);
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.containerInput {
+    margin: 32px 0;
+    padding: 18px;
+    width: 20%;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.App-link {
-  color: #61dafb;
+.containerInput input {
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    color: black;
+    outline: none;
+    margin-right: 10px;
+    font-size: 21px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input::placeholder {
+    color: white;
+    font-style: italic;
+}
+
+.buttonSerch {
+    background-color: transparent;
+    border: none;
+    margin-right: 0;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.buttonSerch:hover {
+    transform: scale(1.5);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 70px;
+    padding-top: 35px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main h2 {
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+
+.main span {
+    margin: 8px;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 380px) {
+    .main{
+        width: 50%;
+    }
+
+    .main h2 {
+        font-size: 18px;
+    }
+
+    .main span {
+        font-size: 12px;
+        border-bottom: 1px solid #444;
+    }
 }
